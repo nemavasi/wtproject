@@ -1,2 +1,10 @@
-/.idea/
-/target/
+/.idea
+/target
+/.idea/libraries/Maven__junit_junit_3_8_1.xml
+/.idea/compiler.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/wtproject.iml
+
