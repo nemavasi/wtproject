@@ -12,4 +12,95 @@
     <artifactId>db</artifactId>
 
 
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        </properties>
+
+        <dependencies>
+
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>2.4.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>1.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>9.4.1212.jre7</version>
+            </dependency>
+
+        </dependencies>
+
+        <build>
+            <plugins>
+
+                <plugin>
+                    <groupId>org.codehaus.gmavenplus</groupId>
+                    <artifactId>gmavenplus-plugin</artifactId>
+                    <version>1.5</version>
+                    <executions>
+                        <execution>
+                            <phase>install</phase>
+                            <goals>
+                                <goal>execute</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <properties>
+                            <property>
+                                <name>baseDir</name>
+                                <value>${project.basedir}</value>
+                            </property>
+                            <property>
+                                <name>dbAddr</name>
+                                <value>//ec2-54-221-201-244.compute-1.amazonaws.com:5432/d11u43tuif3q44</value>
+                                <!--<value>//pfr-test.fors-vyatka.ru:5432/pfr</value>-->
+                            </property>
+                            <property>
+                                <name>dbLogin</name>
+                                <value>otzlmqdjmfwlam</value>
+                            </property>
+                            <property>
+                                <name>dbPass</name>
+                                <value>86bbead08b18aa7d542ed1a8e1fd865a1d610a6154d37eeed19f5dc850373140</value>
+                            </property>
+                        </properties>
+                        <scripts>
+                            <!--создаем БД (при этом старое дропается!)-->
+                            <script>file:///${project.basedir}/src/create_tables.groovy</script>
+                            <!--накатываем последние апдейты-->
+                            <!--<script>file:///${project.basedir}/src/save_tables_updates_.groovy</script>-->
+                            <!--обновляем вьюхи, пакеты с функциями-->
+                            <!--<script>file:///${project.basedir}/src/update_objects.groovy</script>-->
+                            <!--добавляем тестовые данные-->
+                            <!--<script>file:///${project.basedir}/src/add_test_data.groovy</script>-->
+                        </scripts>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-all</artifactId>
+                            <!-- any version of Groovy \>= 1.5.0 should work here -->
+                            <version>2.4.4</version>
+                            <scope>runtime</scope>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+
+            </plugins>
+        </build>
+
+
+
+
+
 </project>
