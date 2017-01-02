@@ -9,4 +9,6 @@
 /*.iml
 /web/*.iml
 /db/*.iml
-
+/web/target
+/db/target
+/.gitignore~
