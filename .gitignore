@@ -7,8 +7,7 @@
 /.idea/vcs.xml
 /.wtproject.iml
 /*.iml
-/web/*.iml
-/db/*.iml
+
 /web/target
 /db/target
 /.gitignore~
