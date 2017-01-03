@@ -1,3 +1,12 @@
+--HSQLDB
+
+--drop schema if exists wt_tables cascade;
+
+--create schema wt_tables;
+--authorization wt;
+--comment on schema wt_tables
+--is 'wt_tables';
+
 
 create table if not exists access_control_item
   (

@@ -1,9 +1,11 @@
+--POSTGRES
+
 drop schema if exists wt_tables cascade;
 
-create schema wtproject
+create schema wt_project
 authorization wt;
-comment on schema pfr_archive
-is 'all pfr_archive';
+comment on schema wt_project
+is 'wtproject';
 
 
 create table  if not exists wt_tables.access_control_item
