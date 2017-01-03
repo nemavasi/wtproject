@@ -6,7 +6,7 @@
 --authorization wt;
 --comment on schema wt_tables
 --is 'wt_tables';
-
+drop table if exists access_control_item cascade;
 
 create table if not exists access_control_item
   (
@@ -21,3 +21,9 @@ comment on table access_control_item
 IS
   'Справочник объектов прав' ;
 
+insert into access_control_item (
+    id, sys_name, name, is_deleted, display_order, search_synonim
+    ) values (
+    1,'admin', 'admin', 'N', 1, 'admin'
+    )
+    ;
