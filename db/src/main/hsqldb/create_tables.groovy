@@ -31,7 +31,7 @@ printWriter.close()
 //запуск скрипта в БД
 import groovy.sql.Sql
 //sql = Sql.newInstance("jdbc:hsqldb:mem:" + dbAddr, dbLogin, dbPass, "org.hsqldb.jdbcDriver")
-sql = Sql.newInstance("jdbc:hsqldb:file:"  + dbAddr, dbLogin, dbPass, "org.hsqldb.jdbcDriver")
+sql = Sql.newInstance("jdbc:hsqldb:file:db/target/"  + dbAddr, dbLogin, dbPass, "org.hsqldb.jdbcDriver")
 sql.execute(dbScript)
 
 println sql.firstRow('select * from access_control_item')
