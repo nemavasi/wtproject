@@ -5,7 +5,7 @@
 def pgScript = "";
 pgScript += "BEGIN;\n"
 
-def prefix = "/src/main/schemas/"
+def prefix = "/src/main/postgres/schemas/"
 
 [
         prefix + "wt_tables/create_tables.sql"

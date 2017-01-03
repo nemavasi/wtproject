@@ -1,7 +1,7 @@
 drop schema if exists wt_tables cascade;
 
-create schema pfr_archive
-authorization pfr;
+create schema wtproject
+authorization wt;
 comment on schema pfr_archive
 is 'all pfr_archive';
 
@@ -15,6 +15,6 @@ create table  if not exists wt_tables.access_control_item
     display_order  numeric(100) ,
     search_synonim varchar (100)
   ) ;
-comment on table pfr_archive.access_control_item
+comment on table wt_tables.access_control_item
 IS
   'Справочник объектов прав' ;
