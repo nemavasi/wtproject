@@ -34,7 +34,7 @@ import groovy.sql.Sql
 sql = Sql.newInstance("jdbc:hsqldb:file:"  + dbAddr, dbLogin, dbPass, "org.hsqldb.jdbcDriver")
 sql.execute(dbScript)
 
-println sql.firstRow('VALUES (current_timestamp)')
+println sql.firstRow('select * from access_control_item')
 
 
 

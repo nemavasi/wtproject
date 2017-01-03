@@ -22,8 +22,8 @@ IS
   'Справочник объектов прав' ;
 
 insert into access_control_item (
-    id, sys_name, name, is_deleted, display_order, search_synonim
+        id, sys_name, name, is_deleted, display_order, search_synonim
     ) values (
-    1,'admin', 'admin', 'N', 1, 'admin'
+        1,'admin', 'admin', 'N', 1, 'admin'
     )
     ;
