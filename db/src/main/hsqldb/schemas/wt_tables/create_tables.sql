@@ -6,8 +6,8 @@
 --authorization wt;
 --comment on schema wt_tables
 --is 'wt_tables';
-drop table if exists access_control_item cascade;
 
+drop table if exists access_control_item cascade;
 
 --create sequence access_control_item_sequ start with 1 increment by 1;
 create table if not exists access_control_item
@@ -19,19 +19,21 @@ create table if not exists access_control_item
     display_order  numeric(100) ,
     search_synonim varchar (100)
   ) ;
-comment on table access_control_item
-IS
-  'Справочник объектов прав' ;
 
-insert into access_control_item (
-        sys_name, name, is_deleted, display_order, search_synonim
-    ) values (
-        'admin', 'admin', 'N', 1, 'admin'
-    )
-    ;
-insert into access_control_item (
-        sys_name, name, is_deleted, display_order, search_synonim
-    ) values (
-        'admin2', 'admin2', 'N', 1, 'admin2'
-    )
-    ;
+  commit;
+--comment on table access_control_item
+--IS
+--  'Справочник объектов прав' ;
+
+--insert into access_control_item (
+--        sys_name, name, is_deleted, display_order, search_synonim
+--    ) values (
+--        'admin', 'admin', 'N', 1, 'admin'
+--    )
+--    ;
+--insert into access_control_item (
+--        sys_name, name, is_deleted, display_order, search_synonim
+--    ) values (
+--        'admin2', 'admin2', 'N', 1, 'admin2'
+--    )
+--    ;

@@ -28,11 +28,19 @@ printWriter.println(pgScript)
 printWriter.close()
 
 //запуск скрипта в БД
-//import groovy.sql.Sql
-//
+import groovy.sql.Sql
+
+Properties props = new Properties();
+props.setProperty("user",dbLogin);
+props.setProperty("password",dbPass);
+props.setProperty("ssl","true");
+
 //sql = Sql.newInstance("jdbc:postgresql:" + dbAddr, dbLogin, dbPass, "org.postgresql.Driver")
-//
-//sql.execute(pgScript)
+sql = Sql.newInstance("jdbc:postgresql:" + dbAddr, props, "org.postgresql.Driver")
+
+Sql.new
+
+sql.execute(pgScript)
 
 
 

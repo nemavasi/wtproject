@@ -5,6 +5,8 @@
     <artifactId>wtproject</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+
     <modules>
         <module>db</module>
         <module>web</module>
