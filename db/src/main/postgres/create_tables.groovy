@@ -8,7 +8,7 @@ pgScript += "BEGIN;\n"
 def prefix = "/src/main/postgres/schemas/"
 
 [
-        prefix + "wt_tables/create_tables.sql"
+        prefix + "wt_tables/001_create_tables.sql"
 
 ].each {
     pgScript += "\n"
@@ -23,7 +23,7 @@ def prefix = "/src/main/postgres/schemas/"
 pgScript += "COMMIT;\n"
 
 //сохранение скрипта в файл
-def printWriter = new File((String) (baseDir + "/target/create_tables.sql")).newPrintWriter()
+def printWriter = new File((String) (baseDir + "/target/001_create_tables.sql")).newPrintWriter()
 printWriter.println(pgScript)
 printWriter.close()
 

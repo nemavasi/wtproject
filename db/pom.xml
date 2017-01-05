@@ -83,7 +83,10 @@
                         <!--hsldb-->
                         <scripts>
                             <!--создаем БД (при этом старое дропается!)-->
+                            <script>file:///${project.basedir}/src/main/hsqldb/drop_tables.groovy</script>
                             <script>file:///${project.basedir}/src/main/hsqldb/create_tables.groovy</script>
+                            <script>file:///${project.basedir}/src/main/hsqldb/alter_tables.groovy</script>
+                            <script>file:///${project.basedir}/src/main/hsqldb/add_start_data.groovy</script>
                             <!--накатываем последние апдейты-->
                             <!--<script>file:///${project.basedir}/src/save_tables_updates_.groovy</script>-->
                             <!--обновляем вьюхи, пакеты с функциями-->

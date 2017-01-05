@@ -9,7 +9,7 @@ def dbScript = "";
 def prefix = "/src/main/hsqldb/schemas/"
 
 [
-        prefix + "wt_tables/001_create_tables.sql"
+        prefix + "wt_tables/002_alter_tables.sql"
 
 ].each {
     dbScript += "\n"
@@ -35,6 +35,7 @@ import groovy.sql.Sql
 //sql = Sql.newInstance("jdbc:hsqldb:mem:" + dbAddr, dbLogin, dbPass, "org.hsqldb.jdbcDriver")
 sql = Sql.newInstance("jdbc:hsqldb:file:db/target/"  + dbAddr, dbLogin, dbPass, "org.hsqldb.jdbcDriver")
 sql.execute(dbScript)
+
 
 
 
