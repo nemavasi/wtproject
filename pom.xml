@@ -22,6 +22,9 @@
         <apache.cxf.version>3.1.5</apache.cxf.version>
         <selenium.version>2.46.0</selenium.version>
         <jasperreports.version>5.5.1</jasperreports.version>
+        <!--<hibernate.version>5.2.5.Final</hibernate.version>-->
+        <hibernate.version>4.3.11.Final</hibernate.version>
+        <hsqldb.version>2.3.4</hsqldb.version>
     </properties>
 
 </project>
