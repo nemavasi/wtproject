@@ -1,14 +1,14 @@
 --POSTGRES
 
-drop schema if exists wt_tables cascade;
+drop schema if exists wtp cascade;
 
-create schema wt_project
+create schema wtp
 authorization wt;
-comment on schema wt_project
-is 'wtproject';
+comment on schema wtp
+is 'tables';
 
 
-create table  if not exists wt_tables.access_control_item
+create table  if not exists wtp.access_control_item
   (
     id             bigserial primary key ,
     sys_name       varchar (30) ,
@@ -17,6 +17,6 @@ create table  if not exists wt_tables.access_control_item
     display_order  numeric(100) ,
     search_synonim varchar (100)
   ) ;
-comment on table wt_tables.access_control_item
+comment on table wtp.access_control_item
 IS
   'Справочник объектов прав' ;
