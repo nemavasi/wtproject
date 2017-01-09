@@ -21,7 +21,7 @@ public class TestHib {
             Query query = session.createQuery("from RoleEntity ");
             List<RoleEntity> list = query.list();
 
-            System.out.println(list.get(1).getName());
+            System.out.println(list.get(1).getName() + " " + list.get(1).isDeleted());
 
             //   session.save(contactEntity);
             //  session.getTransaction().commit();
