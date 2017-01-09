@@ -1,5 +1,6 @@
 package nemavasi.wtproject.hib;
 
+import nemavasi.wtproject.core.dao.LogLevelEntity;
 import nemavasi.wtproject.core.dao.RoleEntity;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -18,10 +19,11 @@ public class TestHib {
             Session session = HibernateUtil.getSessionFactory().openSession();
 
             // session.beginTransaction();
-            Query query = session.createQuery("from RoleEntity ");
-            List<RoleEntity> list = query.list();
+            Query query = session.createQuery("from LogLevelEntity ");
+            List<LogLevelEntity> list = query.list();
 
-            System.out.println(list.get(1).getName() + " " + list.get(1).isDeleted());
+
+            System.out.println(list.get(1).getName() + " " + list.get(1).isDeleted() + " " + list.get(1).getWarning_level());
 
             //   session.save(contactEntity);
             //  session.getTransaction().commit();

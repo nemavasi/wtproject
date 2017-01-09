@@ -27,7 +27,7 @@
 
         <!-- Mapping files -->
         <mapping class="nemavasi.wtproject.core.dao.RoleEntity"/>
-
+        <mapping class="nemavasi.wtproject.core.dao.LogLevelEntity"/>
         <!--<mapping resource="Survey.hbm.xml"/>-->
     </session-factory>
 </hibernate-configuration>
