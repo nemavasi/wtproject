@@ -23,7 +23,7 @@ public class TestHib {
             List<LogLevelEntity> list = query.list();
 
 
-            System.out.println(list.get(1).getName() + " " + list.get(1).isDeleted() + " " + list.get(1).getWarning_level());
+            System.out.println(list.get(1).getName() + " " + list.get(1).isDeleted() + " " + list.get(1).getWarning_level()+ " " + list.get(1).getSearchSynonim());
 
             //   session.save(contactEntity);
             //  session.getTransaction().commit();

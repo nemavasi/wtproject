@@ -10,6 +10,8 @@ public class BaseDictionaryEntity extends BaseDeletableEntity {
 
     private String name;
     private String sysName;
+    private Long displayOrder;
+    private String searchSynonim;
 
     @Column(name = "name")
     public String getName() {
@@ -29,4 +31,21 @@ public class BaseDictionaryEntity extends BaseDeletableEntity {
         this.sysName = sysName;
     }
 
+    @Column(name = "display_order")
+    public Long getDisplayOrder() {
+        return displayOrder;
+    }
+
+    public void setDisplayOrder(Long displayOrder) {
+        this.displayOrder = displayOrder;
+    }
+
+    @Column(name = "search_synonim")
+    public String getSearchSynonim() {
+        return searchSynonim;
+    }
+
+    public void setSearchSynonim(String searchSynonim) {
+        this.searchSynonim = searchSynonim;
+    }
 }
