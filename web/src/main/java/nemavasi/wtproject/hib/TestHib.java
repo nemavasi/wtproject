@@ -14,19 +14,23 @@ public class TestHib {
     public static void main(String[] args) {
         System.out.println("Hibernate tutorial");
 
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
 
-       // session.beginTransaction();
-        Query query = session.createQuery("from RoleEntity ");
-        List<RoleEntity> list = query.list();
+            // session.beginTransaction();
+            Query query = session.createQuery("from RoleEntity ");
+            List<RoleEntity> list = query.list();
 
-        System.out.println(list.get(1).getName());
+            System.out.println(list.get(1).getName());
 
-     //   session.save(contactEntity);
-      //  session.getTransaction().commit();
+            //   session.save(contactEntity);
+            //  session.getTransaction().commit();
 
-        session.close();
+            session.close();
+        } finally {
+            HibernateUtil.shutdown();
+        }
 
-        HibernateUtil.shutdown();
+
     }
 }
